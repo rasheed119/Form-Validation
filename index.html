@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <form id="form" onsubmit="event.preventDefault();">
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm-12 col-md-12 col-lg-4 form-group">
+                <h1 id="title">
+                    Form Submission
+                </h1>
+
+                <section>
+                    <label for="first-name">First Name:</label><br>
+                    <input type="text" id="first-name" placeholder="First Name" required>
+                </section>
+
+                <section>
+                    <label for="last-name">Last Name:</label><br>
+                    <input type="text" id="last-name" placeholder="Last Name" required>
+                </section>
+
+                <section>
+                    <label for="Address_line_1">Address Line 1:</label><br>
+                    <textarea rows="1" cols="50" class="address" id="address" placeholder="Address Line 1"></textarea>
+                </section>
+
+                <section>
+                    <label for="Address_line_2">Address Line 2:</label><br>
+                    <textarea rows="1" cols="50" class="address" id="address" placeholder="Address Line 2"></textarea>
+                </section>
+
+                <section>
+                    <label for="pincode">PIN:</label><br>
+                    <input type="text" id="pincode" placeholder="PIN" required>
+                </section>
+
+                <section>
+                    <label for="Gender">Gender:</label><br>
+                    <input type="radio" id="Gender" name="Gender" class="radio" value="Male">Male
+                    <input type="radio" id="Gender" name="Gender" class="radio" value="Female">Female
+                </section>
+
+                <section>
+                    <label for="food">Choice of food: <i>(must choose at least 2 out of 5 options)</i></label><br>
+                    <input type="checkbox" class="checkbox" name="food" id="food" value="North Indian">North Indian<br>
+                    <input type="checkbox" class="checkbox" name="food" id="food" value="South Indian">South Indian<br>
+                    <input type="checkbox" class="checkbox" name="food" id="food" value="Chinese">Chinese<br>
+                    <input type="checkbox" class="checkbox" name="food" id="food" value="Japanese">Japanese<br>
+                    <input type="checkbox" class="checkbox" name="food" id="food" value="Sea Food">Sea Food<br>
+                </section>
+
+                <section>
+                    <label for="State">State:</label><br>
+                    <input type="text" id="State" name="State" placeholder="State">
+                </section>
+
+                <section>
+                    <label for="Country">Country:</label><br>
+                    <input type="text" id="Country" name="Country" placeholder="Country">
+                </section>
+
+                <section>
+                    <button class="btn btn-primary" onclick="submit_form()" type="submit" id="submit" style="width: 100%;">Submit form</button>
+                </section>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <h1>Temporary Database</h1>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Address</th>
+                                <th>PIN</th>
+                                <th>Gender</th>
+                                <th>Food</th>
+                                <th>State</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </form>
+        <script src="script.js"></script>
+        <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body> 
+</html>
