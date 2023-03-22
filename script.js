@@ -8,7 +8,7 @@ function submit_form(){
     var address_List = [];
     address_List[0] = address[0].value;
     address_List[1] = address[1].value;
-    if(address_List.length==2 && address_List[1]==''){
+    if(address_List[1]==''){
         address_value = address_List[0];
     }else{
         address_value = address_List.join(", ");
