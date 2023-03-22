@@ -5,8 +5,14 @@ function submit_form(){
     var last_name = document.getElementById("last-name").value;
 
     var address = document.getElementsByClassName("address");
-
-    let address_value = [address[0].value,address[1].value];
+    var address_List = [];
+    address_List[0] = address[0].value;
+    address_List[1] = address[1].value;
+    if(address_List.length==2 && address_List[1]==''){
+        address_value = address_List[0];
+    }else{
+        address_value = address_List.join(", ");
+    }
 
     var pin_code = document.getElementById("pincode").value;
 
@@ -34,7 +40,7 @@ function submit_form(){
 
     var country = document.getElementById("Country").value;
 
-    table(first_name,last_name,address_value.join(", "),pin_code,gender_check,food_items,state,country);
+    table(first_name,last_name,address_value,pin_code,gender_check,food_items,state,country);
 }
 
 function table(first_name,last_name,address,pin_code,gender_check,food_items,state,country){
